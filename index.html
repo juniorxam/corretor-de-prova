@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Corrija suas respostas da prova com pesos diferentes nas 30 últimas questões." />
+  <title>Corretor de Prova</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand-mark">CP</div>
+      <div><p class="eyebrow">Gestor em Saúde · FGV</p><h1>Corretor de prova</h1></div>
+      <div class="top-note">60 questões<br><strong>90 pontos</strong></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="kicker">Seu resultado em segundos</p>
+          <h2>Confira cada resposta<br><em>sem fazer conta.</em></h2>
+          <p class="hero-copy">Digite ou cole suas alternativas e veja o resultado detalhado. As questões 31 a 60 valem o dobro.</p>
+        </div>
+        <div class="hero-stamp"><span>01–30</span><b>×1</b><span>31–60</span><b>×2</b></div>
+      </section>
+
+      <section class="workspace">
+        <div class="input-card card">
+          <div class="section-heading"><div><span class="step">01</span><h3>Insira suas respostas</h3></div><span id="counter" class="counter">0/60 preenchidas</span></div>
+          <p class="muted">Use apenas A, B, C ou D. Você pode deixar uma questão em branco.</p>
+          <div id="answer-grid" class="answer-grid" aria-label="Respostas das questões"></div>
+          <div class="input-actions"><button id="clear-btn" class="btn btn-ghost" type="button">Limpar tudo</button><button id="grade-btn" class="btn btn-primary" type="button">Corrigir prova <span>→</span></button></div>
+          <p id="validation" class="validation" role="alert"></p>
+        </div>
+
+        <aside class="summary card">
+          <div class="section-heading"><div><span class="step">02</span><h3>Seu resultado</h3></div></div>
+          <div id="empty-state" class="empty-state"><div class="empty-icon">○</div><p>Preencha as respostas e clique em <strong>Corrigir prova</strong>.</p></div>
+          <div id="summary-content" class="hidden">
+            <div class="score-ring"><strong id="score">—</strong><span>/ 90 pts</span></div>
+            <p id="percent" class="percent">—</p>
+            <div class="stat-row"><div><b id="correct">0</b><span>Acertos</span></div><div><b id="wrong">0</b><span>Erros</span></div><div><b id="blank">0</b><span>Brancos</span></div></div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="notice" class="notice"><span class="notice-icon">i</span><p><strong>Importante:</strong> o gabarito foi resolvido a partir do PDF enviado. As questões <strong>4, 17, 37 e 47</strong> tinham trechos pouco legíveis e devem ser conferidas no gabarito oficial.</p></section>
+
+      <section id="results-section" class="results card hidden">
+        <div class="results-head"><div><span class="step">03</span><h3>Correção detalhada</h3></div><span id="result-caption" class="muted"></span></div>
+        <div id="results-grid" class="results-grid"></div>
+      </section>
+    </main>
+    <footer>Corretor pessoal · as respostas ficam apenas neste navegador.</footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
