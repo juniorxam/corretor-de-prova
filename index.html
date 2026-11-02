@@ -29,6 +29,7 @@
         <div class="input-card card">
           <div class="section-heading"><div><span class="step">01</span><h3>Insira suas respostas</h3></div><span id="counter" class="counter">0/60 preenchidas</span></div>
           <p class="muted">Use apenas A, B, C ou D. Você pode deixar uma questão em branco.</p>
+          <div class="bulk-entry"><label for="bulk-input">Colar respostas em lote</label><textarea id="bulk-input" rows="2" placeholder="Ex.: C A B C D C C C ... A"></textarea><div class="bulk-actions"><span id="bulk-hint">Aceita espaços, vírgulas ou quebras de linha</span><button id="apply-bulk" class="btn btn-small" type="button">Aplicar respostas</button></div></div>
           <div id="answer-grid" class="answer-grid" aria-label="Respostas das questões"></div>
           <div class="input-actions"><button id="clear-btn" class="btn btn-ghost" type="button">Limpar tudo</button><button id="grade-btn" class="btn btn-primary" type="button">Corrigir prova <span>→</span></button></div>
           <p id="validation" class="validation" role="alert"></p>

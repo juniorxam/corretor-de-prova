@@ -4,7 +4,7 @@ Site responsivo para preencher 60 respostas e conferir a prova com pesos diferen
 
 ## PDF da correção
 
-Depois de preencher as respostas, clique em **Corrigir prova**. O resumo e a correção detalhada serão exibidos. Em seguida, clique em **Gerar PDF da correção** e escolha **Salvar como PDF** na janela de impressão do navegador. O documento inclui as respostas marcadas, o gabarito, os acertos, erros, brancos, pontuação e percentual.
+Cole as 60 respostas na caixa **Colar respostas em lote** — separadas por espaços, vírgulas ou quebras de linha — e clique em **Aplicar respostas**. Depois clique em **Corrigir prova**. O resumo e a correção detalhada serão exibidos. Em seguida, clique em **Gerar PDF da correção** e escolha **Salvar como PDF** na janela de impressão do navegador. O documento inclui as respostas marcadas, o gabarito, os acertos, erros, brancos, pontuação e percentual.
 
 ## Gabarito
 
