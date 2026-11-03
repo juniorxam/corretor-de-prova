@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Corrija suas respostas da prova com pesos diferentes nas 30 últimas questões." />
-  <title>Corretor de Prova</title>
+  <meta name="description" content="Selecione o cargo e a prova para corrigir suas respostas com pesos diferentes nas 30 últimas questões." />
+  <title>Corretor de Prova · Saúde Tocantins</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="shell">
     <header class="topbar">
       <div class="brand-mark">CP</div>
-      <div><p class="eyebrow">Gestor em Saúde · FGV</p><h1>Corretor de prova</h1></div>
+      <div><p class="eyebrow">Saúde Tocantins · Edital 01/2026</p><h1>Corretor de prova</h1></div>
       <div class="top-note">60 questões<br><strong>90 pontos</strong></div>
     </header>
 
@@ -19,15 +19,23 @@
       <section class="hero">
         <div>
           <p class="kicker">Seu resultado em segundos</p>
-          <h2>Confira cada resposta<br><em>sem fazer conta.</em></h2>
-          <p class="hero-copy">Digite ou cole suas alternativas e veja o resultado detalhado. As questões 31 a 60 valem o dobro.</p>
+          <h2>Escolha sua prova<br><em>e confira tudo.</em></h2>
+          <p class="hero-copy">Selecione o cargo e a versão da prova que você fez. Depois, digite ou cole suas alternativas para ver a correção detalhada.</p>
         </div>
         <div class="hero-stamp"><span>01–30</span><b>×1</b><span>31–60</span><b>×2</b></div>
       </section>
 
+      <section class="selection-card card">
+        <div class="section-heading"><div><span class="step">01</span><h3>Qual prova você fez?</h3></div><span id="cargo-level" class="counter">60 questões · 90 pontos</span></div>
+        <div class="selection-grid">
+          <label class="field"><span>Cargo / especialidade</span><select id="cargo-select" aria-label="Escolha o cargo"></select></label>
+          <label class="field"><span>Versão da prova</span><select id="prova-select" aria-label="Escolha a prova"></select></label>
+        </div>
+      </section>
+
       <section class="workspace">
         <div class="input-card card">
-          <div class="section-heading"><div><span class="step">01</span><h3>Insira suas respostas</h3></div><span id="counter" class="counter">0/60 preenchidas</span></div>
+          <div class="section-heading"><div><span class="step">02</span><h3>Insira suas respostas</h3></div><span id="counter" class="counter">0/60 preenchidas</span></div>
           <p class="muted">Use apenas A, B, C ou D. Você pode deixar uma questão em branco.</p>
           <div class="bulk-entry"><label for="bulk-input">Colar respostas em lote</label><textarea id="bulk-input" rows="2" placeholder="Ex.: C A B C D C C C ... A"></textarea><div class="bulk-actions"><span id="bulk-hint">Aceita espaços, vírgulas ou quebras de linha</span><button id="apply-bulk" class="btn btn-small" type="button">Aplicar respostas</button></div></div>
           <div id="answer-grid" class="answer-grid" aria-label="Respostas das questões"></div>
@@ -36,8 +44,8 @@
         </div>
 
         <aside class="summary card">
-          <div class="section-heading"><div><span class="step">02</span><h3>Seu resultado</h3></div></div>
-          <div id="empty-state" class="empty-state"><div class="empty-icon">○</div><p>Preencha as respostas e clique em <strong>Corrigir prova</strong>.</p></div>
+          <div class="section-heading"><div><span class="step">03</span><h3>Seu resultado</h3></div></div>
+          <div id="empty-state" class="empty-state"><div class="empty-icon">○</div><p>Selecione sua prova, preencha as respostas e clique em <strong>Corrigir prova</strong>.</p></div>
           <div id="summary-content" class="hidden">
             <div class="score-ring"><strong id="score">—</strong><span>/ 90 pts</span></div>
             <p id="percent" class="percent">—</p>
@@ -46,15 +54,16 @@
         </aside>
       </section>
 
-      <section id="notice" class="notice"><span class="notice-icon">i</span><p><strong>Importante:</strong> o gabarito foi transcrito da folha de conferência manuscrita enviada. Ele serve para comparação e não substitui o gabarito oficial da FGV.</p></section>
+      <section id="notice" class="notice"><span class="notice-icon">i</span><p><strong>Importante:</strong> os gabaritos preliminares foram transcritos do PDF enviado, referente à prova aplicada em 01/11/2026. Esta correção serve para conferência e não substitui o gabarito oficial.</p></section>
 
       <section id="results-section" class="results card hidden">
-        <div class="results-head"><div><span class="step">03</span><h3>Correção detalhada</h3></div><span id="result-caption" class="muted"></span></div>
+        <div class="results-head"><div><span class="step">04</span><h3>Correção detalhada</h3></div><span id="result-caption" class="muted"></span></div>
         <div id="results-grid" class="results-grid"></div>
       </section>
     </main>
     <footer>Corretor pessoal · as respostas ficam apenas neste navegador.</footer>
   </div>
+  <script src="gabaritos.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
