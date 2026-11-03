@@ -10,6 +10,9 @@
 - [ ] Exibir aviso sobre as questões 4, 17, 37 e 47.
 - [ ] Manter experiência responsiva em celular e computador.
 
+## Desempenho por matéria
+- [ ] Exibir acertos, total e percentual para Português, Matemática/Raciocínio Lógico, História/Geografia, SUS e Conhecimentos Específicos.
+
 ## PDF da correção
 - [ ] Oferecer botão para imprimir/salvar em PDF as respostas marcadas, o gabarito, os acertos e o desempenho.
 
